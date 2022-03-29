@@ -1,0 +1,207 @@
+{% load static %}
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie10 lt-ie9 lt-ie8 lt-ie7 "> <![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie10 lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie10 lt-ie9"> <![endif]-->
+<!--[if IE 9]><html class="no-js lt-ie10"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+
+    <!-- Basic Page Needs -->
+    <meta charset="utf-8">
+    <title>Bookkeeping App</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="{% static 'content/wallet/images/favicon.ico' %}">
+
+    <!-- FONTS -->
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:100,300,400,400italic,700'>
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Patua+One:100,300,400,400italic,700'>
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:100,300,400,400italic,700,700italic'>
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Lato:100,300,400'>
+
+    <!-- CSS -->
+    <link rel='stylesheet' href="{% static 'css/global.css' %}">
+    <link rel='stylesheet' href="{% static 'content/wallet/css/structure.css' %}">
+    <link rel='stylesheet' href="{% static 'content/wallet/css/wallet.css' %}">
+    <link rel='stylesheet' href="{% static 'content/wallet/css/custom.css' %}>
+
+    <!-- Revolution Slider -->
+    <link rel="stylesheet" href="{% static 'plugins/rs-plugin/css/settings.css' %}">
+
+</head>
+
+<body class="color-custom style-simple layout-full-width nice-scroll-on button-flat header-classic minimalist-header-no sticky-header sticky-tb-color ab-show subheader-both-center menu-line-below menuo-right footer-copy-center mobile-tb-left mobile-mini-ml-lc mobile-header-mini tr-menu">
+    <div id="Wrapper">
+        <div id="Header_wrapper">
+            
+            <div id="Subheader" style="padding:170px 0 80px;">
+                <div class="container">
+                    <div class="column one">
+                        <h1 class="title">Client Record</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="Content">
+            <div class="content_wrapper clearfix">
+                <div class="sections_group">
+                    <div id="post-2283" class="no-title no-share post-2283 post  format-standard has-post-thumbnail  category-events tag-design">
+                        <div class="section section-post-header">
+                            <div class="section_wrapper clearfix">
+                                <div class="column one post-nav minimal">
+                                    <a class="next" href="{% url 'recordPG' %}"><i class="icon icon-right-open-big"></i></a>
+                                    </li>
+                                    <a class="home" href="{% url 'homePG' %}"> 
+                                        <svg class="icon" width="22" height="22" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M7,2v5H2V2H7 M9,0H0v9h9V0L9,0z" />
+                                            <path d="M20,2v5h-5V2H20 M22,0h-9v9h9V0L22,0z" />
+                                            <path d="M7,15v5H2v-5H7 M9,13H0v9h9V13L9,13z" />
+                                            <path d="M20,15v5h-5v-5H20 M22,13h-9v9h9V13L22,13z" />
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div class="column one post-header">
+                                    
+                                    <div class="title_wrapper">
+                                        <div class="post-meta clearfix">
+                                            <div class="author-date">
+                                                <span class="vcard author post-author"> <span class="label">Created by</span> <i class="icon-user"></i> <span class="fn"><a href="#">Admin</a></span> </span><span class="date"> <span class="label">at</span> <i class="icon-clock"></i>
+                                                <time class="entry-date" datetime="2014-05-05T09:34:27+00:00" itemprop="datePublished" pubdate>
+                                                    {{ record.creation_date }}
+                                                </time>
+                                                </span>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="column one single-photo-wrapper image">
+                                    <div class="image_frame scale-with-grid ">
+                                        <div class="image_wrapper">
+                                            <a href="images/home_wallet_blog4-1200x800.jpg" rel="prettyphoto">
+                                                <div class="mask"></div><img width="1200" height="480" src="{% static 'images/prof1.png' %}" class="scale-with-grid wp-post-image" alt="home_wallet_blog4" />
+                                            </a>
+                                            <div class="image_links">
+                                                <a href="images/home_wallet_blog4-1200x800.jpg" class="zoom" rel="prettyphoto"><i class="icon-search"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post-wrapper-content">
+                            <div class="section mcb-section" style="padding-top:10px; padding-bottom:0px;">
+                                <div class="section_wrapper mcb-section-inner">
+                                    <div class="wrap mcb-wrap one  valign-top clearfix">
+                                        <div class="mcb-wrap-inner">
+                                            <div class="column mcb-column one-fifth column_placeholder">
+                                                <div class="placeholder">
+                                                    &nbsp;
+                                                </div>
+                                            </div>
+                                            <div class="section mcb-section" style="padding-top:90px; padding-bottom:50px; background-color:#3e6edf">
+                                                <div class="section_wrapper mcb-section-inner">
+                                                    <div class="wrap mcb-wrap one  valign-top clearfix">
+                                                        <div class="mcb-wrap-inner" style="display: flex; flex-direction: row; flex-wrap: wrap;">
+                                                            <div class="column mcb-column one column_column" style="width: 100%;">
+                                                                <div class="column_attr clearfix align_center" style=" padding:0 12%;">
+                                                                    <h2 style="color: #fff;">{{ record.name }}</h2>
+                                                                    <h6 style="color: #d8e2f9;">This is supposed to be more information about the transactions made.</h6>
+                                                                </div>
+                                                            </div>
+                                                           <div class="column mcb-column three-fifth column_column " style="color: #fff; width: 100%;">
+                                                                <div class="column_attr clearfix">
+                                                                    <table class="table">
+                                                                        <thead class="thead-dark">
+                                                                        <tr>
+                                                                            <th scope="col">Loan Amount</th>
+                                                                            <th scope="col">%</th>
+                                                                            <th scope="col">Percentage Share</th>
+                                                                            <th scope="col">Duration</th>
+                                                                        </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                        {% for i in record.history_set.all %}
+                                                                        <tr>
+                                                                            <td>{{ i.loan_amount }}</td>
+                                                                            <td>{{ i.percentage }}</td>
+                                                                            <td>{{ i.interest }}</td>
+                                                                            <td>{{ i.time }} Days</td>
+
+                                                                        </tr>
+                                                                        {% endfor %}
+                                                                        </tbody>
+                                                                    </table>
+                                                                    
+                                                                    
+                                                                </div>
+                                                            </div> 
+                                                        </div>
+                                                        
+                                                    </div>
+                                                </div>
+                                            </div>
+                                                <br>
+                                                <br>
+                                                <br>
+                                                <br>
+                                                <br>
+                                                <br>
+                                                <br>
+                                                <br>
+                                                <br>
+                                                <br>
+                                                <br>
+                                                <br>
+                                                <br>
+                                                <br>
+                                                <br>
+                                                <br>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+    </div>
+    
+    <!-- JS -->
+    <script src="{% static 'js/jquery-2.1.4.min.js' %}"></script>
+
+    <script src="{% static 'js/mfn.menu.js' %}"></script>
+    <script src="{% static 'js/jquery.plugins.js' %}"></script>
+    <script src="{% static 'js/jquery.jplayer.min.js' %}"></script>
+    <script src="{% static 'js/animations/animations.js' %}"></script>
+    <script src="{% static 'js/translate3d.js' %}"></script>
+    <script src="{% static 'js/scripts.js' %}"></script>
+
+    <script id="mfn-dnmc-retina-js">
+        jQuery(window).load(function() {
+            var retina = window.devicePixelRatio > 1 ? true : false;
+            if (retina) {
+                var retinaEl = jQuery("#logo img.logo-main");
+                var retinaLogoW = retinaEl.width();
+                var retinaLogoH = retinaEl.height();
+                retinaEl.attr("src", "images/retina-wallet.png").width(retinaLogoW).height(retinaLogoH);
+                var stickyEl = jQuery("#logo img.logo-sticky");
+                var stickyLogoW = stickyEl.width();
+                var stickyLogoH = stickyEl.height();
+                stickyEl.attr("src", "images/retina-wallet.png").width(stickyLogoW).height(stickyLogoH);
+                var mobileEl = jQuery("#logo img.logo-mobile");
+                var mobileLogoW = mobileEl.width();
+                var mobileLogoH = mobileEl.height();
+                mobileEl.attr("src", "images/retina-wallet.png").width(mobileLogoW).height(mobileLogoH);
+            }
+        });
+    </script>
+</body>
+
+</html>

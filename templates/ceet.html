@@ -1,0 +1,56 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    <div class="table"></div>
+    <table class="table table-striped">
+    
+       
+            <thead>
+                <tr>
+                    <th>Customer Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                    <th>Profile Creation Date&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                    <th>Phone Number&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                    <th>Email&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                    <th>Address&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                {% for i in record.history_set.all %}
+                <tr>
+                    <td>{{ i.name.name }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                    <td>{{ i.loan_amount }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                    <td>{{ i.paid_amount }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                    <td>{{ i.balance }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                    <td>{{ record.name.address }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+
+                    {% comment %} <td><a href="{% url 'update' pk=object.pk %}">Update</a></td>
+                        <td><a href="{% url 'delete' pk=object.pk %}">Delete</a></td> {% endcomment %}
+                
+                </tr>
+
+                <tr>
+                    <th>Loan Amount&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                    <th>Paid Amount&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                    <th>Balance&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                    
+                </tr>
+
+                <tr>
+
+                    <td>{{ record.loan_amount }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                    <td>{{ record.paid_amount }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                    <td>{{ record.balance }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+
+                </tr>
+                {% endfor %}
+            </tbody>
+
+            <h2>Test: </h2>
+</body>
+</html>

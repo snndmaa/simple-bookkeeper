@@ -1,0 +1,38 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Records</title>
+</head>
+<body>
+    <div class="table"></div>
+<table class="table table-striped">
+
+   
+        <thead>
+            <tr>
+                <th>Customer Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                <th> Entry date&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                <th>Loan Amount&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            {% for object in records %} 
+                <tr>
+                    <td><a href="{% url 'ceetPG' pk=object.pk %}">{{ object.name }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></td>
+
+
+                    {% comment %} <td><a href="{% url 'update' pk=object.pk %}">Update</a></td>
+                    <td><a href="{% url 'delete' pk=object.pk %}">Delete</a></td> {% endcomment %}
+
+                    </td>
+                
+                </tr>
+            {% endfor %}
+	
+		</tbody>
+ </table>
+</body>
+</html>

@@ -1,0 +1,161 @@
+{% load static %}
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie10 lt-ie9 lt-ie8 lt-ie7 "> <![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie10 lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie10 lt-ie9"> <![endif]-->
+<!--[if IE 9]><html class="no-js lt-ie10"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+
+    <!-- Basic Page Needs -->
+    <meta charset="utf-8">
+    <title>Bookkeeping App</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="{% static 'content/wallet/images/favicon.ico' %}">
+
+    <!-- FONTS -->
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:100,300,400,400italic,700'>
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Patua+One:100,300,400,400italic,700'>
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:100,300,400,400italic,700,700italic'>
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Lato:100,300,400'>
+
+    <!-- CSS -->
+    <link rel='stylesheet' href="{% static 'css/global.css' %}">
+    <link rel='stylesheet' href="{% static 'content/wallet/css/structure.css' %}">
+    <link rel='stylesheet' href="{% static 'content/wallet/css/wallet.css' %}">
+    <link rel='stylesheet' href="{% static 'content/wallet/css/custom.css' %}>
+
+    <!-- Revolution Slider -->
+    <link rel="stylesheet" href="{% static 'plugins/rs-plugin/css/settings.css' %}">
+
+</head>
+
+<body class="color-custom style-simple layout-full-width nice-scroll-on button-flat no-content-padding header-classic minimalist-header-no sticky-header sticky-tb-color ab-show subheader-both-center menu-line-below menuo-right footer-copy-center mobile-tb-left mobile-mini-ml-lc mobile-header-mini tr-menu">
+    <div id="Wrapper">
+        <div id="Header_wrapper">
+            
+            <div id="Subheader" style="padding:170px 0 80px;">
+                <div class="container">
+                    <div class="column one">
+                        <h1 class="title">Profile Form</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="Content">
+            <div class="content_wrapper clearfix">
+                <div class="sections_group">
+                    <div class="entry-content">
+                        <div class="section mcb-section" style="padding-top:90px; padding-bottom:50px;">
+                            <div class="section_wrapper mcb-section-inner">
+                                <div class="wrap mcb-wrap one-second  valign-top clearfix" style="padding:20px 2% 0 0">
+                                    <div class="mcb-wrap-inner">
+                                        <div class="column mcb-column one column_column  column-margin-20px">
+                                            <div class="column_attr clearfix">
+                                                <h2>Fill the form to create a client profile</h2>
+                                                <hr class="no_line" style="margin: 0 auto 10px;" />
+                                                <div role="form" class="wpcf7" id="wpcf7-f2381-p16-o1" lang="en-US" dir="ltr">
+
+                                                    <div id="contactWrapper">
+                                                        <form id="contactform" method="POST">
+                                                            {% csrf_token %}
+                                                            <div class="column one-second">
+                                                                {{ form.name }}
+                                                            </div>
+                                                            <div class="column one-second">
+                                                                {{ form.number }}
+                                                            </div>
+                                                            <div class="column one-second">
+                                                                {{ form.email }}
+                                                            </div>
+                                                            <div class="column one-second">
+                                                                {{ form.address }}
+                                                            </div>
+                                                            <div class="column one">
+                                                                <input type="submit" value="Create Profile">
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="column mcb-column one column_divider ">
+                                            <hr  style="margin: 0 auto 40px;" />
+                                        </div>
+                                        <div class="column mcb-column one-second column_column ">
+                                            <div class="column_attr clearfix" style=" padding:0 6% 0 0;">
+                                                <h6 class="themecolor">Instruction</h6>
+                                                <a href="{% url 'homePG' %}">
+                                                <p>
+                                                    Click Here To Go Home!
+                                                </p>
+                                                </a>
+                                                <p>
+                                                    Made for Ola Financial Institute
+                                                    <br> Level 13, 2 Elizabeth
+                                                    <br> Victoria 3000 Lagos
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="column mcb-column one-second column_column ">
+                                            <div class="column_attr clearfix">
+                                                <!-- <h6 class="themecolor">Telephone:</h6>
+                                                <p>
+                                                    +234
+                                                </p> -->
+                                                <h6 class="themecolor">E-mail:</h6>
+                                                <p>
+                                                    noreply@olainstitute.com
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="wrap mcb-wrap one-second  valign-top clearfix">
+                                    <div class="mcb-wrap-inner">
+                                        <div class="column mcb-column one column_map ">
+
+                                            <div class="google-map-wrapper no_border">
+                                                <div class="google-map" style="width:100%; height:750px;">
+                                                    &nbsp;
+                                                    <img src="{% static 'images/cust2.jpg' %}" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+    <!-- JS -->
+    <script src="{% static 'js/jquery-2.1.4.min.js' %}"></script>
+
+    <script src="{% static 'js/mfn.menu.js' %}"></script>
+    <script src="{% static 'js/jquery.plugins.js' %}"></script>
+    <script src="{% static 'js/jquery.jplayer.min.js' %}"></script>
+    <script src="{% static 'js/animations/animations.js' %}"></script>
+    <script src="{% static 'js/translate3d.js' %}"></script>
+    <script src="{% static 'js/scripts.js' %}"></script>
+
+    <!-- <script src="../../js/email.js"></script> -->
+
+
+</body>
+
+</html>
